@@ -1,0 +1,76 @@
+body {
+  background-color: rgb(16, 145, 102);
+}
+
+li {
+  list-style-type: none;
+}
+
+.divPages {
+  margin: 0 auto;
+  margin-top: 5em;
+  border: solid blue 2px;
+  padding: 0.2em;
+  width: 6em;
+}
+
+header {
+  border: solid 2px lawngreen;
+  width: 100%;
+  min-height: 10em;
+
+  h1 {
+    padding: 0.5em;
+    color: orange;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  & nav ul li {
+    width: 25%;
+    text-align: center;
+    background-color: greenyellow;
+    padding: 0.3em;
+    color: blue;
+  }
+
+  & a {
+    width: 100%;
+  }
+
+  & li:hover {
+    background-color: rgb(106, 158, 28);
+  }
+}
+
+@media screen and (max-width: 50em) {
+  body {
+    background-color: khaki;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav {
+    width: 200%;
+    ul {
+      width: 200%;
+      li {
+        max-width: initial;
+        width: 100%;
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
