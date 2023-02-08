@@ -1,5 +1,57 @@
 @import url('./_base.scss');
 
+main{
+
+    display: grid;
+    
+
+    .card{
+        margin: 0 auto;
+        border: solid 2px white;
+        width: 12em;
+        padding: 1em;
+        min-height: 35em;
+
+        img{
+            width: 12em;
+        }
+
+        .divText{
+
+            h3{
+                padding-top: 0.5em;
+                margin: 0;
+            }
+
+            display: grid;
+            width: 100%;
+
+            small{
+                margin-left: 4em;
+            }
+            button{
+                background-color: aqua;
+                color: white;
+                height: 3em;
+                border: none;
+            }
+            & button:active{
+                font-size: 75%;
+                margin-top: 0.2em;
+            }
+        }
+    }
+
+    .card:hover{
+    -webkit-box-shadow: 34px -3px 85px 76px rgba(61, 83, 245, 1);
+    -moz-box-shadow: 34px -3px 85px 76px rgba(61, 83, 245, 1);
+    box-shadow: 34px -3px 85px 76px rgba(61, 83, 245, 1);
+     
+    position: relative;
+    bottom: 1em;
+    left: 0.5em;
+   }
+}
 
 
 
