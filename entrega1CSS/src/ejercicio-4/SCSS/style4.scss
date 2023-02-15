@@ -2,11 +2,11 @@
 
 main{
 
-    display: grid;
-    
+    display: flex;
+     grid-template-columns: repeat(auto-fit, auto);
+     justify-content: space-around;
 
     .card{
-        margin: 0 auto;
         border: solid 2px white;
         width: 12em;
         padding: 1em;
