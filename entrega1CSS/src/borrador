@@ -1,0 +1,39 @@
+// Declaración de variables para cada bloque de tres elementos
+$block1-start: #3f3f3f; // color inicial para el primer bloque
+$block1-end: #999999; // color final para el primer bloque
+
+$block2-start: #993f3f; // color inicial para el segundo bloque
+$block2-end: #ff9999; // color final para el segundo bloque
+
+$block3-start: #3f993f; // color inicial para el tercer bloque
+$block3-end: #99ff99; // color final para el tercer bloque
+
+// Bucle 1: Cambia el degradado de color cada 3 elementos, empezando desde el primer elemento
+@for $i from 1 through 3 {
+  li:nth-child(3n + #{$i}) {
+    background-color: linear-gradient(to bottom, $block1-start, $block1-end);
+  }
+  
+  $block1-start: lighten($block1-start, 10%);
+  $block1-end: lighten($block1-end, 10%);
+}
+
+// Bucle 2: Cambia el degradado de color cada 3 elementos, empezando desde el segundo elemento
+@for $i from 1 through 3 {
+  li:nth-child(3n + #{$i + 1}) {
+    background-color: linear-gradient(to bottom, $block2-start, $block2-end);
+  }
+  
+  $block2-start: lighten($block2-start, 10%);
+  $block2-end: lighten($block2-end, 10%);
+}
+
+// Bucle 3: Cambia el degradado de color cada 3 elementos, empezando desde el tercer elemento
+@for $i from 1 through 3 {
+  li:nth-child(3n + #{$i + 2}) {
+    background-color: linear-gradient(to bottom, $block3-start, $block3-end);
+  }
+  
+  $block3-start: lighten($block3-start, 10%);
+  $block3-end: lighten($block3-end, 10%);
+}
