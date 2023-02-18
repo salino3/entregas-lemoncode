@@ -29,7 +29,7 @@ header {
     nav{
         position: sticky;
             top: 0;
-        height: 100vh;
+        height: 88vh;
 
         .menu_container {
                 height: 100%;
@@ -41,13 +41,13 @@ header {
                 background-color: #01748d;
                 padding: 0.5em;
               }
-              ul {
+            &  ul {
                 width: 100%;
                 display: grid;
                 margin: 0;
                 padding: 0;
           
-                li {
+               & li {
                   padding: 1em 0em 1em;
                   background-color: #9fcf30;
                   width: 100%;
@@ -65,12 +65,38 @@ header {
             }
     }
 
-  .list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
-    justify-content: space-between;
-  }
+    main{
+        margin-top: 1em;
+        // display: inline;
+        // grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        & .list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+          gap: 1em;
+          justify-content: center;
+          margin:  0 auto;
+
+          .card{
+            border: solid 1px;
+            display: grid;
+            & img{
+
+                margin: 0 auto;
+                margin-top: 1em;
+                border-radius: 100%;
+            }
+            & .member_name{
+                margin: 0 auto;
+                background-color: #9fcf30;
+                min-width: 50px;
+                width: auto;
+                max-width: 96px;
+                margin-bottom: 1em; 
+                padding-bottom: 0;     
+               }
+          }
+        }
+    }
 }
 
 footer {
