@@ -1,1 +1,80 @@
-@import url('./_base.scss');
+@import url("./_base.scss");
+
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+
+  & .toolbar {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    background-color: #168d8b;
+
+    & input{
+        max-height: 1.8em;
+    }
+  }
+  & .page_title {
+    padding: 1em;
+    color: white;
+    font-size: larger;
+    background-color: #cfe02b;
+  }
+}
+
+.page_container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+    nav{
+        position: sticky;
+            top: 0;
+        height: 100vh;
+
+        .menu_container {
+                height: 100%;
+                background-color: #01748d;
+                margin-right: 1em;
+             
+          
+              .menu_title {
+                background-color: #01748d;
+                padding: 0.5em;
+              }
+              ul {
+                width: 100%;
+                display: grid;
+                margin: 0;
+                padding: 0;
+          
+                li {
+                  padding: 1em 0em 1em;
+                  background-color: #9fcf30;
+                  width: 100%;
+                  justify-self: center;
+                  align-self: center;
+                  text-align: center;
+                  margin-left: 0;
+                  margin: 0.05em 0em 0.05em;
+                }
+          
+                & li:hover {
+                  background-color: #62860d;
+                }
+              }
+            }
+    }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  padding: 1em 2em 2em;
+  background-color: #168d8b;
+  font-size: larger;
+}

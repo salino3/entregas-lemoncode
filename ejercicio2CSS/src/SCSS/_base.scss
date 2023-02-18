@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    color: white;
+    background-color: rgba(151, 235, 151, 0.783);
+
+    & .page_container{
+            margin: 0.5em 0.5em 0em;
+    }
+
+    li{
+      list-style-type: none;
+    }
+}
